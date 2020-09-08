@@ -1,3 +1,35 @@
 <p>dashboard works!</p>
 
 <button type="button" (click) = "gotoContact()">Contact</button>
+<div style="margin-left: 550px;">
+<form >
+    <mat-form-field class="example-full-width">
+        <input matInput type="text" name="text" [(ngModel)]="username" placeholder="Enter UserName">
+    </mat-form-field>
+    <br/>
+        <mat-form-field appearance="outline">
+            <mat-label>Prefix</mat-label>
+            <mat-select [(ngModel)]="food" name="prefix" (selectionChange) = "onChange($event)">
+              <mat-option *ngFor="let food of foods" [value]="food">
+                {{food.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <br/>
+    <mat-form-field>
+        <input matInput type='email' name="email" [(ngModel)]="email" placeholder="Enter Email address">
+    </mat-form-field>
+    <br/>
+    <mat-form-field class="example-full-width">
+        
+    <input matInput type='password' name="password" placeholder="Enter Password">
+    </mat-form-field>
+    <br/>
+    <button mat-raised-button color='primary' type="submit" (click)="onSubmit()">Signup</button>
+</form>
+</div>
+
+<div style="margin-left: 550px;" *ngIf="isSubmit">
+<h5>This is {{prefix}}&nbsp;{{userName}}</h5>
+<h5>And My Email address is : {{Email}}</h5>
+</div>
