@@ -1,5 +1,6 @@
+import { Route } from '@angular/compiler/src/core';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationExtras, Router } from '@angular/router';
 import * as _ from 'lodash';
 interface Food {
   value: string;
@@ -37,9 +38,23 @@ email: string;
   }
 
   onSubmit(){
+    sessionStorage.setItem('name', this.username);
+    sessionStorage.setItem('email', this.email);
+    sessionStorage.setItem('msg', 'This is test message');
     this.isSubmit = true;
     this.userName = this.username;
     this.Email = this.email;
+
+  //   const navigationExtras: NavigationExtras = {
+  //     queryParams: {
+  //         userName: this.username,
+  //         email: this.email,
+  //         message: 'This is test Message',
+  //     }
+  // };
+  // this.router.navigate(['/contact'], navigationExtras);
+  this.router.navigate(['/contact']);
+  
   }
 
   onChange(event){

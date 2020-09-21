@@ -1,4 +1,16 @@
-<p>contact works!</p>
-
-<button mat-raised-button color="primary" type="button" (click) = "backToHome()">Back</button>
-<button mat-button color="primary">Primary</button>
+<div class="container">
+    <div>
+        <button type="button" [routerLink]="['/dashboard']" routerLinkActive="router-link-active" >back</button>
+    </div>
+<div class="row">
+    <div class="col-md-12">Reactive Forms</div>
+</div>
+<div>
+    <form [formGroup]="contactForm" (ngSubmit) = 'submit()'>
+        <input type="text" name="fullName" placeholder="Full Name" formControlName="fullname"><br/>
+        <input type="email" name="email" placeholder="Email" formControlName="email"><br/>
+        <textarea name="msg" placeholder="Enter Ur Msg" formControlName="message"></textarea><br/>
+        <input type="submit" value="Send">
+    </form>
+</div>
+</div>
