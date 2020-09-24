@@ -1,6 +1,6 @@
 <div class="container">
     <div>
-        <button type="button" [routerLink]="['/dashboard']" routerLinkActive="router-link-active" >back</button>
+        <button type="button" mat-raised-button color="primary" [routerLink]="['/dashboard']" routerLinkActive="router-link-active" >back</button>
     </div>
 <div class="row">
     <div class="col-md-12">Reactive Forms</div>
@@ -13,4 +13,55 @@
         <input type="submit" value="Send">
     </form>
 </div>
+<div class="row">
+    <div class="col-md-6">
+        <h5>Buttons in Angular Material</h5>
+        <ul type="square">
+            <li>Basic Button</li>
+            <li>Raised Button</li>
+            <li> Stroked Button</li>
+            <li>flat button</li>
+        </ul>
+        <ol type="A">
+            <li>Icon Button</li>
+            <li>Fab Button</li>
+            <li>Mini Fab Button</li>
+        </ol>
+        <mat-list>
+            <mat-list-item *ngFor="let fold of folders">
+                <mat-icon mat-list-icon>folder</mat-icon>
+                <h4 mat-line>{{fold.name}}</h4>
+                <p mat-line>{{fold.update | date}}</p>
+            </mat-list-item>
+        </mat-list>
+    </div>
+    <div class="col-md-6">
+        <mat-list>
+            <mat-list-item>
+                <button mat-button color='primay'>Basic Primary</button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-raised-button color='accent'>Raised Accent</button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-stroked-button color='warn'>Stroked Warn</button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-flat-button color='Disabled'>Flat Disabled</button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-icon-button color='primay'><mat-icon>folder</mat-icon>></button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-fab color='primay'>Fab Primary</button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-mini-fab color='primay'>Fab-mini Primary</button>
+            </mat-list-item>
+        </mat-list>
+    </div>
+</div>
+
+
+
 </div>
