@@ -8,13 +8,15 @@ import { ContactComponent } from './contact/contact.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AccordComponent } from './accord/accord.component';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     DashboardComponent,
-    ContactComponent
-  ],
+    ContactComponent,
+      AccordComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
