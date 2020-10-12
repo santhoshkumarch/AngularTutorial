@@ -4,6 +4,7 @@ import { AccordComponent } from './accord/accord.component';
 
 import { ContactComponent } from './contact/contact.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { TablesComponent } from './tables/tables.component';
 
 
 const routes: Routes = [
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'accod',
     component: AccordComponent,
+  },
+  {
+    path: 'table',
+    component: TablesComponent
   }
 
 ];

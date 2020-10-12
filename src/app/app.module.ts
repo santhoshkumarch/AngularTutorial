@@ -9,13 +9,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AccordComponent } from './accord/accord.component';
+import { TablesComponent } from './tables/tables.component';
 
 @NgModule({
-  declarations: [	
+  declarations: [		
     AppComponent,
     DashboardComponent,
     ContactComponent,
-      AccordComponent
+      AccordComponent,
+      TablesComponent
    ],
   imports: [
     BrowserModule,

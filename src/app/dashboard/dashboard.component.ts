@@ -36,6 +36,9 @@ email: string;
   gotoContact(){
     this.router.navigateByUrl('contact')
   }
+  gotoTable(){
+    this.router.navigateByUrl('table')
+  }
 
   onSubmit(){
     sessionStorage.setItem('name', this.username);
